@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import CoreData
 
 class UsersPresenterRouter {
  
@@ -33,17 +34,46 @@ class UsersPresenterRouter {
     
     //MARK: Navigation
     func prepare(for segue: UIStoryboardSegue, sender: Any?){
-        if segue.identifier == "segu"{
+        if segue.identifier == payment{
             if let vc = segue.destination as? PaymentViewController {
                 vc.user = sender as? User
-                
                 //Save user on core data
             }
         }
         else {
-            
+            if let vc = segue.destination as? CardRegisterViewController{
+                //Save user on core data
+            }
         }
 
+    }
+    
+    //MARK: MODEL Manupulation Methods
+    
+    func saveUser(_ user: User?){
+        guard let u = user else { return }
+        
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        
+        //setup user object
+        let entity = NSEntityDescription.entity(forEntityName: "UserModel", in: context)!
+        let user = NSManagedObject(entity: entity, insertInto: context)
+        user.setValue(Int32(u.id), forKey: "id")
+        user.setValue(u.name, forKey: "name")
+        user.setValue(u.username, forKey: "username")
+        user.setValue(u.img, forKey: "img")
+        
+        do{
+            try context.save()
+        }
+        catch let error as NSError{
+            print("Could not save.")
+        }
+        
+    }
+    
+    func loadUser(){
+        
     }
 
 }

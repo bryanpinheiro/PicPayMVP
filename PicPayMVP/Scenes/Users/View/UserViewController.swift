@@ -72,7 +72,7 @@ extension UserViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        presenter.onDidSelectRowAt(for: indexPath.row, isActive: false)
+        presenter.onDidSelectRowAt(for: indexPath.row, isActive: searchController.isActive)
     }
     
 }

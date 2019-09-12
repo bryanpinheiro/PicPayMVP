@@ -93,13 +93,12 @@
                     <navigationItem key="navigationItem" title="Contatos" id="58Y-FP-kn1"/>
                     <connections>
                         <outlet property="tableView" destination="KFb-Iv-eDS" id="IPO-8U-ff6"/>
-                        <segue destination="ubA-OF-hN2" kind="show" identifier="cardRegister" id="CBH-lk-6mB"/>
                         <segue destination="8Yp-q2-aIx" kind="show" identifier="payment" id="axo-Va-M6g"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zi3-H8-9GM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1929" y="-42"/>
+            <point key="canvasLocation" x="1800" y="-42"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="eEx-N5-SZS">
@@ -172,7 +171,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DIA-gu-9P9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3623" y="-42"/>
+            <point key="canvasLocation" x="4504" y="-42"/>
         </scene>
         <!--Card Register View Controller-->
         <scene sceneID="gJ1-SD-Ctn">
@@ -283,12 +282,11 @@
                         <outlet property="lbTitular" destination="ck7-lW-zzc" id="ENm-7J-U4m"/>
                         <outlet property="lbVencimento" destination="yA3-ON-zS4" id="E9J-5X-b1E"/>
                         <outlet property="scrollView" destination="tsA-mp-fMc" id="cNd-6t-XpH"/>
-                        <segue destination="8Yp-q2-aIx" kind="show" identifier="payment" id="Cuc-xH-cVD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bqn-5n-RLN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4433" y="-42"/>
+            <point key="canvasLocation" x="5155" y="-42"/>
         </scene>
         <!--Payment View Controller-->
         <scene sceneID="ZDN-cm-1pg">
@@ -380,12 +378,12 @@
                     </navigationItem>
                     <connections>
                         <outlet property="userImage" destination="aAv-90-lnu" id="xEZ-bo-dwK"/>
-                        <segue destination="ubA-OF-hN2" kind="show" identifier="cardRegister" id="5Ij-VG-6Uc"/>
+                        <segue destination="NhA-fE-cTN" kind="show" id="gdj-lF-dhK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A00-Pb-tLq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2604" y="801"/>
+            <point key="canvasLocation" x="3503" y="-42"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Tbk-lb-qX8">
@@ -408,7 +406,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yFK-nU-az5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1025" y="-42"/>
+            <point key="canvasLocation" x="1146" y="-42"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fSN-KB-zso">
@@ -427,30 +425,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t1X-Lu-fJK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1838" y="802"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="OTM-5X-HZC">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ubA-OF-hN2" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="Ns1-eq-Q0B">
-                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="0.1137254902" green="0.1176470588" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="NhA-fE-cTN" kind="relationship" relationship="rootViewController" id="He8-XS-ane"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zcE-9l-iMq" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2814" y="-42"/>
+            <point key="canvasLocation" x="2852" y="-42"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="5Ij-VG-6Uc"/>
-        <segue reference="Cuc-xH-cVD"/>
-    </inferredMetricsTieBreakers>
 </document>
