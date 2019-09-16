@@ -22,7 +22,7 @@ class CardRegisterRouter {
     
     //MARK: PresentPayment
     func presentPayment(user: User){
-        viewController?.performSegue(withIdentifier: payment, sender: user)
+//        viewController?.performSegue(withIdentifier: payment, sender: user)
     }
     
     //MARK: Navigation

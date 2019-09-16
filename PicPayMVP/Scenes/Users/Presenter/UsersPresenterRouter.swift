@@ -8,7 +8,11 @@
 
 import Foundation
 import UIKit
-import CoreData
+
+struct InfoUser {
+    var userData: User
+    var imageData: Data
+}
 
 class UsersPresenterRouter {
  
@@ -16,64 +20,32 @@ class UsersPresenterRouter {
     
     //MARK: properties
     private let payment = "payment"
-    private let cardRegister = "cardRegister"
+    private let cardRegister = "cardregister"
     
     init(_ viewController: UserViewController){
         self.viewController = viewController
     }
     
     //MARK: PresentPayment
-    func presentPayment(user: User){
-        viewController?.performSegue(withIdentifier: payment, sender: user)
+    func presentPayment(user: User, data: Data){
+        let info:InfoUser = InfoUser.init(userData: user, imageData: data)
+        viewController?.performSegue(withIdentifier: payment, sender: info)
     }
     
     //MARK: PresentCardRegister
-    func presentCardRegister(user: User){
-        viewController?.performSegue(withIdentifier: cardRegister, sender: user)
+    func presentCardRegister(){
+        viewController?.performSegue(withIdentifier: cardRegister, sender: self)
     }
     
     //MARK: Navigation
     func prepare(for segue: UIStoryboardSegue, sender: Any?){
-        if segue.identifier == payment{
-            if let vc = segue.destination as? PaymentViewController {
-                vc.user = sender as? User
-                //Save user on core data
-            }
+        if segue.identifier == payment {
+            let vc = segue.destination as! PaymentViewController
+            let info = sender as! InfoUser
+            let image = UIImage(data: info.imageData, scale: 1.0)
+            vc.user = info.userData
+            vc.image = image
         }
-        else {
-            if let vc = segue.destination as? CardRegisterViewController{
-                //Save user on core data
-            }
-        }
-
     }
     
-    //MARK: MODEL Manupulation Methods
-    
-    func saveUser(_ user: User?){
-        guard let u = user else { return }
-        
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        
-        //setup user object
-        let entity = NSEntityDescription.entity(forEntityName: "UserModel", in: context)!
-        let user = NSManagedObject(entity: entity, insertInto: context)
-        user.setValue(Int32(u.id), forKey: "id")
-        user.setValue(u.name, forKey: "name")
-        user.setValue(u.username, forKey: "username")
-        user.setValue(u.img, forKey: "img")
-        
-        do{
-            try context.save()
-        }
-        catch let error as NSError{
-            print("Could not save.")
-        }
-        
-    }
-    
-    func loadUser(){
-        
-    }
-
 }

@@ -10,6 +10,7 @@ import Foundation
 
 enum NetworkEnvironment {
     case production
+    case payment
 }
 
 public enum PicPayApi {
@@ -21,6 +22,7 @@ extension PicPayApi: EndPointType {
     var environmentBaseURL : String {
         switch NetworkManager.environment {
         case .production: return "http://careers.picpay.com/tests/mobdev/users"
+        case .payment: return "http://careers.picpay.com/tests/mobdev/transaction"
         }
     }
     

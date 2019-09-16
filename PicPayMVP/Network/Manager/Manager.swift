@@ -28,9 +28,8 @@ struct NetworkManager {
     static let shared = NetworkManager()
     static let environment : NetworkEnvironment = .production
     let router = Router<PicPayApi>()
-//    static let PicPayAPIKey = "5a48b1746e3955b677d870c588036f62"
     
-    
+    //MASK: GET
     func getPopular(completion: @escaping (Response?, String?) -> Void){
         router.request(.popular) { data, response, error in
             if error != nil {
@@ -58,6 +57,11 @@ struct NetworkManager {
                 }
             }
         }
+    }
+    
+    //MASK: POST
+    func transaction(){
+        
     }
     
     fileprivate func handleNetworkResponse(_ response: HTTPURLResponse) -> Result<String>{
