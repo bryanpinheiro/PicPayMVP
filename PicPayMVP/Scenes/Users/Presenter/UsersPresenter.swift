@@ -31,26 +31,22 @@ class UsersPresenter {
     
     //MARK: ViewDidLoad
     func viewDidLoad() {
-        view.startLoading()
-
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) { [weak self] in
-            self!.view.stoploading()
-            self?.getUsers(completed: { (response, error) in
+            NetworkManager.shared.getContatos(completion: { (response, error) in
                 if(error == nil){
                     guard let r = response else { return }
-                    self?.users = r.results
-                    self!.view.reloadData()
+                    self?.users = r
+                    self?.view.reloadData()
                 }
             })
         }
     }
     
     //MARK: Network
-    private func getUsers(completed: @escaping(Response?, String?) -> Void) {
-        NetworkManager.shared.getPopular() { (response, error) in
+    private func getUsers(completed: @escaping([User]?, String?) -> Void) {
+        NetworkManager.shared.getContatos { (response, error) in
             if(error == nil){
                 completed(response, nil)
-
             } else {
                 completed(nil, error)
             }
@@ -73,6 +69,7 @@ class UsersPresenter {
     }
     
     //MARK: onDidSelect
+    @available(iOS 13.0, *)
     func onDidSelectRowAt(for row: Int, isActive: Bool){
         if(load() == nil) {
             router.presentCardRegister()
@@ -80,9 +77,13 @@ class UsersPresenter {
         else{
             let image = images[row]
             if isActive {
-                router.presentPayment(user: filteredUsers[row], data: image)
+                AppData.User = filteredUsers[row]
+                AppData.Image = UIImage(data: image, scale: 1.0)
+                router.presentPayment()
             } else {
-                router.presentPayment(user: users[row], data: image)
+                AppData.User = users[row]
+                AppData.Image = UIImage(data: image, scale: 1.0)
+                router.presentPayment()
             }
         }
     }
@@ -106,7 +107,6 @@ class UsersPresenter {
         else {
             return cardArray![0]
         }
-        
     }
     
     //MARK: Cell
@@ -126,18 +126,11 @@ class UsersPresenter {
             guard let data = image.jpegData(compressionQuality: 1) else { return }
             self.images.append(data)
         }
-        
     }
     
     //MARK: GET CARD FROM CORE DATA
-    
     func load(){
         
-    }
-    
-    //MARK: Navigation
-    func prepare(for segue: UIStoryboardSegue, sender: Any?){
-        router.prepare(for: segue, sender: sender)
     }
     
 }

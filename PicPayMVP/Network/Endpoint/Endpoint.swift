@@ -9,20 +9,19 @@
 import Foundation
 
 enum NetworkEnvironment {
-    case production
-    case payment
+    case base
 }
 
 public enum PicPayApi {
-    case popular
+    case contatos
+    case pagamento(numero: String, cvv: Int, valor: Double, expiracao: String, idContato: Int)
 }
 
 extension PicPayApi: EndPointType {
     
     var environmentBaseURL : String {
         switch NetworkManager.environment {
-        case .production: return "http://careers.picpay.com/tests/mobdev/users"
-        case .payment: return "http://careers.picpay.com/tests/mobdev/transaction"
+        case .base: return "http://careers.picpay.com/tests/mobdev"
         }
     }
     
@@ -33,21 +32,34 @@ extension PicPayApi: EndPointType {
     
     var path: String {
         switch self {
-        case .popular:
-            return ""
+        case .contatos:
+            return "/users"
+        case .pagamento:
+            return "/transaction"
         }
     }
     
     var httpMethod: HTTPMethod {
-        return .get
+        switch self {
+        case .contatos:
+            return .get
+        case .pagamento:
+            return .post
+        }
     }
     
     var task: HTTPTask {
         switch self {
-        case .popular:
-            return .requestParameters(bodyParameters: nil,
-                                      bodyEncoding: .urlEncoding,
-                                      urlParameters: nil)
+        case .contatos:
+            return .request
+        case .pagamento(let numero, let cvv, let valor, let expiracao, let idContato):
+            return .requestParameters(bodyParameters:
+                ["card_number": numero,
+                 "cvv": cvv,
+                 "value": valor,
+                 "expiry_date": expiracao,
+                 "destination_user_id": idContato]
+                , bodyEncoding: .jsonEncoding, urlParameters: nil)
         }
     }
     

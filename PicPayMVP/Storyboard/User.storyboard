@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3EG-UM-vtT">
-    <device id="retina5_5" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="CdN-Bx-fTK">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,13 +10,13 @@
         <!--Contatos-->
         <scene sceneID="f8l-z8-v4p">
             <objects>
-                <viewController id="CdN-Bx-fTK" customClass="UserViewController" customModule="PicPayMVP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="UserViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="CdN-Bx-fTK" customClass="UserViewController" customModule="PicPayMVP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pxf-BB-u0H">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="672"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="UsersTableview" bounces="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KFb-Iv-eDS">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="672"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="UsersTableview" bounces="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KFb-Iv-eDS">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <color key="backgroundColor" red="0.11372549019607843" green="0.11764705882352941" blue="0.12549019607843137" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="sectionIndexBackgroundColor" red="0.11372549019607843" green="0.11764705882352941" blue="0.12549019607843137" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
@@ -27,14 +24,14 @@
                                         <rect key="frame" x="0.0" y="28" width="414" height="90"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0eA-GE-GSk" id="hno-LX-P3y">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="89.666666666666671"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="90"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Plv-EA-E2Z" customClass="RoundImage" customModule="PicPayMVP" customModuleProvider="target">
-                                                    <rect key="frame" x="24" y="19.333333333333329" width="52" height="52"/>
+                                                    <rect key="frame" x="24" y="19" width="52" height="41"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="52" id="Clu-ur-ZQZ"/>
-                                                        <constraint firstAttribute="height" constant="52" id="UIT-Hc-Je6"/>
+                                                        <constraint firstAttribute="height" constant="52" id="MYc-V6-czF"/>
+                                                        <constraint firstAttribute="width" constant="52" id="xhp-hl-K61"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -42,14 +39,14 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="99p-7h-j9t">
-                                                    <rect key="frame" x="92" y="24.333333333333336" width="302" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="@username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="99p-7h-j9t">
+                                                    <rect key="frame" x="92" y="24" width="302" height="21"/>
                                                     <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xl1-NB-2wM">
-                                                    <rect key="frame" x="92" y="45.333333333333329" width="302" height="21"/>
+                                                    <rect key="frame" x="92" y="45" width="302" height="10"/>
                                                     <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="16"/>
                                                     <color key="textColor" white="1" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
@@ -93,20 +90,18 @@
                     <navigationItem key="navigationItem" title="Contatos" id="58Y-FP-kn1"/>
                     <connections>
                         <outlet property="tableView" destination="KFb-Iv-eDS" id="IPO-8U-ff6"/>
-                        <segue destination="PRA-uc-dA9" kind="show" identifier="payment" id="v8k-N2-U5Z"/>
-                        <segue destination="NhA-fE-cTN" kind="show" identifier="cardregister" id="mQ2-ch-7sP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zi3-H8-9GM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1838" y="-42"/>
+            <point key="canvasLocation" x="1607" y="-42"/>
         </scene>
-        <!--View Controller-->
+        <!--Card Register One View Controller-->
         <scene sceneID="eEx-N5-SZS">
             <objects>
-                <viewController id="NhA-fE-cTN" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CardRegisterOneViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="NhA-fE-cTN" customClass="CardRegisterOneViewController" customModule="PicPayMVP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xp3-SI-e3F">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="672"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aTA-wU-dMh">
@@ -130,7 +125,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yLa-Ie-mNW">
-                                <rect key="frame" x="48" y="572" width="318" height="64"/>
+                                <rect key="frame" x="48" y="636" width="318" height="64"/>
                                 <color key="backgroundColor" red="0.066666666669999999" green="0.78039215689999997" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="SPe-cw-1Fs"/>
@@ -144,7 +139,7 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="seu-8h-y2S" kind="show" id="zBR-WL-wKg"/>
+                                    <action selector="Next:" destination="NhA-fE-cTN" eventType="touchUpInside" id="SkG-kh-qZr"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -165,29 +160,32 @@
                         <viewLayoutGuide key="safeArea" id="4n0-zF-39O"/>
                     </view>
                     <navigationItem key="navigationItem" id="IGs-Oe-GOL">
-                        <barButtonItem key="leftBarButtonItem" title="&lt;" id="9Sz-LA-zwt">
+                        <barButtonItem key="leftBarButtonItem" image="outline_arrow_back_ios_black_18pt" id="9Sz-LA-zwt">
                             <color key="tintColor" red="0.066666666669999999" green="0.78039215689999997" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="back:" destination="NhA-fE-cTN" id="VjT-w2-K2X"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DIA-gu-9P9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2662" y="-42"/>
+            <point key="canvasLocation" x="2338" y="-42"/>
         </scene>
         <!--Card Register View Controller-->
         <scene sceneID="gJ1-SD-Ctn">
             <objects>
-                <viewController id="seu-8h-y2S" customClass="CardRegisterViewController" customModule="PicPayMVP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CardRegisterViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="seu-8h-y2S" customClass="CardRegisterViewController" customModule="PicPayMVP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="C5x-Uu-YBI">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="672"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tsA-mp-fMc">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="672"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                                 <color key="backgroundColor" red="0.11372549019607843" green="0.11764705882352941" blue="0.12549019607843137" alpha="1" colorSpace="calibratedRGB"/>
                             </scrollView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BBw-f5-ubo">
-                                <rect key="frame" x="20" y="24" width="374" height="319.66666666666669"/>
+                                <rect key="frame" x="20" y="24" width="374" height="331.66666666666669"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cadastrar cartão" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KdB-Cz-qX1">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="33.666666666666664"/>
@@ -195,35 +193,51 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome do titular" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ck7-lW-zzc">
-                                        <rect key="frame" x="28" y="81.666666666666657" width="318" height="30"/>
-                                        <nil key="textColor"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome do titular" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ck7-lW-zzc" customClass="TextFieldMaterialDesign" customModule="PicPayMVP" customModuleProvider="target">
+                                        <rect key="frame" x="28" y="81.666666666666671" width="318" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="colorActive" value="#11C76F"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="colorDefault" value="#c9c9c9"/>
+                                        </userDefinedRuntimeAttributes>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Número do cartão" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="q6g-lk-bxl">
-                                        <rect key="frame" x="28" y="127.66666666666666" width="318" height="30"/>
-                                        <nil key="textColor"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Número do cartão" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="q6g-lk-bxl" customClass="TextFieldMaterialDesign" customModule="PicPayMVP" customModuleProvider="target">
+                                        <rect key="frame" x="28" y="131.66666666666666" width="318" height="34"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="maskString" value="NNNNNNNNNNNNNNNN"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="colorActive" value="#11C76F"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="colorDefault" value="#c9c9c9"/>
+                                        </userDefinedRuntimeAttributes>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Vencimento" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yA3-ON-zS4">
-                                        <rect key="frame" x="28" y="173.66666666666669" width="180" height="30"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Vencimento" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yA3-ON-zS4" customClass="TextFieldMaterialDesign" customModule="PicPayMVP" customModuleProvider="target">
+                                        <rect key="frame" x="28" y="181.66666666666666" width="220" height="34"/>
+                                        <color key="textColor" red="0.1137254902" green="0.97902397259999996" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="maskString" value="NN/NN"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="colorActive" value="#11C76F"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="colorDefault" value="#c9c9c9"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="CVV" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KRW-ap-NZp" customClass="TextFieldMaterialDesign" customModule="PicPayMVP" customModuleProvider="target">
+                                        <rect key="frame" x="256" y="181.66666666666666" width="90" height="34"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="180" id="0MI-tH-WWY"/>
+                                            <constraint firstAttribute="width" constant="90" id="lBm-Qe-IsQ"/>
                                         </constraints>
-                                        <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                         <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="CVV" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KRW-ap-NZp">
-                                        <rect key="frame" x="216" y="173.66666666666669" width="130" height="30"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="maskString" value="NNN"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="colorActive" value="#11C76F"/>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="colorDefault" value="#c9c9c9"/>
+                                        </userDefinedRuntimeAttributes>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uWC-28-flN">
-                                        <rect key="frame" x="28" y="239.66666666666669" width="318" height="64"/>
+                                        <rect key="frame" x="28" y="251.66666666666669" width="318" height="64"/>
                                         <color key="backgroundColor" red="0.066666666669999999" green="0.78039215689999997" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="64" id="KXJ-ue-4Qy"/>
@@ -278,23 +292,23 @@
                         <viewLayoutGuide key="safeArea" id="S7R-tt-OET"/>
                     </view>
                     <connections>
-                        <outlet property="lbCvv" destination="KRW-ap-NZp" id="oUu-5x-fhZ"/>
-                        <outlet property="lbNumCartao" destination="q6g-lk-bxl" id="xAu-d4-oi9"/>
-                        <outlet property="lbTitular" destination="ck7-lW-zzc" id="ENm-7J-U4m"/>
-                        <outlet property="lbVencimento" destination="yA3-ON-zS4" id="E9J-5X-b1E"/>
                         <outlet property="scrollView" destination="tsA-mp-fMc" id="cNd-6t-XpH"/>
+                        <outlet property="txtCvv" destination="KRW-ap-NZp" id="RfX-5k-2HA"/>
+                        <outlet property="txtExpiryDate" destination="yA3-ON-zS4" id="koH-dd-JdS"/>
+                        <outlet property="txtNumCard" destination="q6g-lk-bxl" id="lzl-V2-piP"/>
+                        <outlet property="txtTitular" destination="ck7-lW-zzc" id="jy0-LQ-LW7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bqn-5n-RLN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3530" y="-42"/>
+            <point key="canvasLocation" x="3067" y="-42"/>
         </scene>
         <!--Payment View Controller-->
         <scene sceneID="ZDN-cm-1pg">
             <objects>
-                <viewController id="PRA-uc-dA9" customClass="PaymentViewController" customModule="PicPayMVP" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PaymentViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="PRA-uc-dA9" customClass="PaymentViewController" customModule="PicPayMVP" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Rm7-wW-sS9">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="672"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="aAv-90-lnu" customClass="RoundImage" customModule="PicPayMVP" customModuleProvider="target">
@@ -329,7 +343,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k7X-Iy-GzB">
-                                <rect key="frame" x="235.33333333333334" y="246.66666666666669" width="58.666666666666657" height="30"/>
+                                <rect key="frame" x="235.33333333333334" y="246.66666666666663" width="58.666666666666657" height="30"/>
                                 <state key="normal" title="EDITAR">
                                     <color key="titleColor" red="0.066666666669999999" green="0.78039215689999997" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -351,8 +365,11 @@
                                         <integer key="value" value="32"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="pay:" destination="PRA-uc-dA9" eventType="touchUpInside" id="ZPd-2e-8Xo"/>
+                                </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" borderStyle="roundedRect" textAlignment="center" minimumFontSize="38" translatesAutoresizingMaskIntoConstraints="NO" id="hYj-42-JZ8">
+                            <textField opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0" textAlignment="center" minimumFontSize="38" translatesAutoresizingMaskIntoConstraints="NO" id="hYj-42-JZ8">
                                 <rect key="frame" x="102.66666666666667" y="133" width="208.66666666666663" height="75"/>
                                 <color key="backgroundColor" red="0.11372549019607843" green="0.11764705882352941" blue="0.12549019607843137" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -361,6 +378,9 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="54"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" returnKeyType="done"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="maskString" value="NNNN"/>
+                                </userDefinedRuntimeAttributes>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.1137254902" green="0.1176470588" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -387,7 +407,7 @@
                         <viewLayoutGuide key="safeArea" id="5Dy-74-WO9"/>
                     </view>
                     <navigationItem key="navigationItem" id="ccu-uf-IiU">
-                        <barButtonItem key="leftBarButtonItem" title="&lt;" id="VUf-ft-94K">
+                        <barButtonItem key="leftBarButtonItem" image="outline_arrow_back_ios_black_18pt" id="VUf-ft-94K">
                             <color key="tintColor" red="0.066666666666666666" green="0.7803921568627451" blue="0.43529411764705883" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="back:" destination="PRA-uc-dA9" id="f2b-gY-R9P"/>
@@ -396,39 +416,109 @@
                     </navigationItem>
                     <connections>
                         <outlet property="lbUsername" destination="nsS-Al-9ei" id="8YD-Wi-2MP"/>
+                        <outlet property="txtPrice" destination="hYj-42-JZ8" id="pNs-9a-HKU"/>
                         <outlet property="userImage" destination="aAv-90-lnu" id="xEZ-bo-dwK"/>
-                        <segue destination="seu-8h-y2S" kind="show" identifier="cardregister" id="WvT-Vf-2yI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A00-Pb-tLq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2596" y="710"/>
+            <point key="canvasLocation" x="3778" y="-42"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="Tbk-lb-qX8">
+        <!--Receipt View Controller-->
+        <scene sceneID="sCP-h1-wAg">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3EG-UM-vtT" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="7cq-Jj-NMa">
-                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" red="0.1137254902" green="0.1176470588" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="barTintColor" red="0.1137254902" green="0.1176470588" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
-                        <textAttributes key="titleTextAttributes">
-                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        </textAttributes>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
+                <viewController storyboardIdentifier="ReceiptViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="DZu-UH-06e" customClass="ReceiptViewController" customModule="PicPayMVP" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NFq-0v-M20">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4fp-1l-jcc" customClass="RoundImage" customModule="PicPayMVP" customModuleProvider="target">
+                                <rect key="frame" x="160" y="71" width="94" height="94"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="94" id="6jb-Hq-4hh"/>
+                                    <constraint firstAttribute="height" constant="94" id="XVY-KK-KXu"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="47"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@zelda.williams" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U03-LH-jPl">
+                                <rect key="frame" x="40" y="177" width="334" height="20.333333333333343"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recibo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6nL-E1-nuP">
+                                <rect key="frame" x="172" y="20" width="70" height="27"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total pago" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lLw-gp-Syq">
+                                <rect key="frame" x="40" y="313.33333333333331" width="95" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$ 16,90" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5pw-40-IoI">
+                                <rect key="frame" x="295.33333333333331" y="313.33333333333331" width="84.666666666666686" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="date" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XFb-pJ-B6q">
+                                <rect key="frame" x="40" y="213.33333333333334" width="334" height="20.333333333333343"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="id" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KaD-8F-NWN">
+                                <rect key="frame" x="40" y="253.00000000000003" width="334" height="20.333333333333343"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.11372549019607843" green="0.11764705882352941" blue="0.12549019607843137" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="cHm-rx-WUM" firstAttribute="trailing" secondItem="U03-LH-jPl" secondAttribute="trailing" constant="40" id="3ZU-Dc-fhk"/>
+                            <constraint firstItem="5pw-40-IoI" firstAttribute="top" secondItem="KaD-8F-NWN" secondAttribute="bottom" constant="40" id="Dan-wK-n0C"/>
+                            <constraint firstItem="lLw-gp-Syq" firstAttribute="top" secondItem="KaD-8F-NWN" secondAttribute="bottom" constant="40" id="Dre-UC-Q0b"/>
+                            <constraint firstItem="6nL-E1-nuP" firstAttribute="top" secondItem="cHm-rx-WUM" secondAttribute="top" constant="20" id="FYN-Dh-wHG"/>
+                            <constraint firstItem="U03-LH-jPl" firstAttribute="leading" secondItem="cHm-rx-WUM" secondAttribute="leading" constant="40" id="LgO-hZ-r42"/>
+                            <constraint firstItem="4fp-1l-jcc" firstAttribute="centerX" secondItem="cHm-rx-WUM" secondAttribute="centerX" id="SbA-ow-7E6"/>
+                            <constraint firstItem="U03-LH-jPl" firstAttribute="top" secondItem="4fp-1l-jcc" secondAttribute="bottom" constant="12" id="Xur-eZ-Ddt"/>
+                            <constraint firstItem="6nL-E1-nuP" firstAttribute="centerX" secondItem="cHm-rx-WUM" secondAttribute="centerX" id="h6q-PM-YR2"/>
+                            <constraint firstItem="4fp-1l-jcc" firstAttribute="top" secondItem="6nL-E1-nuP" secondAttribute="bottom" constant="24" id="mbg-G6-yBu"/>
+                            <constraint firstItem="XFb-pJ-B6q" firstAttribute="top" secondItem="U03-LH-jPl" secondAttribute="bottom" constant="16" id="nhy-5H-D1o"/>
+                            <constraint firstItem="cHm-rx-WUM" firstAttribute="trailing" secondItem="KaD-8F-NWN" secondAttribute="trailing" constant="40" id="ns5-Jc-gSL"/>
+                            <constraint firstItem="KaD-8F-NWN" firstAttribute="leading" secondItem="cHm-rx-WUM" secondAttribute="leading" constant="40" id="oLy-cX-ihi"/>
+                            <constraint firstItem="cHm-rx-WUM" firstAttribute="trailing" secondItem="5pw-40-IoI" secondAttribute="trailing" constant="34" id="q3W-Qi-NeW"/>
+                            <constraint firstItem="lLw-gp-Syq" firstAttribute="leading" secondItem="cHm-rx-WUM" secondAttribute="leading" constant="40" id="vEE-LI-WKV"/>
+                            <constraint firstItem="KaD-8F-NWN" firstAttribute="top" secondItem="XFb-pJ-B6q" secondAttribute="bottom" constant="19.333333333333314" id="whk-4T-8Sk"/>
+                            <constraint firstItem="cHm-rx-WUM" firstAttribute="trailing" secondItem="XFb-pJ-B6q" secondAttribute="trailing" constant="40" id="xMk-rK-bPJ"/>
+                            <constraint firstItem="XFb-pJ-B6q" firstAttribute="leading" secondItem="cHm-rx-WUM" secondAttribute="leading" constant="40" id="xZ5-tM-A0O"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="cHm-rx-WUM"/>
+                    </view>
                     <connections>
-                        <segue destination="CdN-Bx-fTK" kind="relationship" relationship="rootViewController" id="Jib-IN-Vny"/>
+                        <outlet property="imgUser" destination="4fp-1l-jcc" id="nGV-HM-yt3"/>
+                        <outlet property="lbDate" destination="XFb-pJ-B6q" id="Txc-fd-kEh"/>
+                        <outlet property="lbID" destination="KaD-8F-NWN" id="sKh-Y1-r1R"/>
+                        <outlet property="lbMoney" destination="5pw-40-IoI" id="7xF-Cp-Fkk"/>
+                        <outlet property="lbStatus" destination="6nL-E1-nuP" id="5Zp-QD-FhV"/>
+                        <outlet property="lbUsername" destination="U03-LH-jPl" id="LhU-Oy-HMa"/>
                     </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yFK-nU-az5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2gH-Mr-L33" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1059" y="-42"/>
+            <point key="canvasLocation" x="4486.9565217391309" y="-42.391304347826093"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="WvT-Vf-2yI"/>
-    </inferredMetricsTieBreakers>
+    <resources>
+        <image name="outline_arrow_back_ios_black_18pt" width="18" height="18"/>
+    </resources>
 </document>

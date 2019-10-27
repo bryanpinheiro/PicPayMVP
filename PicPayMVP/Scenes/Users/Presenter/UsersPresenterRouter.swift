@@ -27,25 +27,15 @@ class UsersPresenterRouter {
     }
     
     //MARK: PresentPayment
-    func presentPayment(user: User, data: Data){
-        let info:InfoUser = InfoUser.init(userData: user, imageData: data)
-        viewController?.performSegue(withIdentifier: payment, sender: info)
+    @available(iOS 13.0, *)
+    func presentPayment(){
+        AppData.appDelegate.navigationController?.pushViewController(AppData.viewControllers[2].viewController, animated: true)
     }
     
     //MARK: PresentCardRegister
+    @available(iOS 13.0, *)
     func presentCardRegister(){
-        viewController?.performSegue(withIdentifier: cardRegister, sender: self)
-    }
-    
-    //MARK: Navigation
-    func prepare(for segue: UIStoryboardSegue, sender: Any?){
-        if segue.identifier == payment {
-            let vc = segue.destination as! PaymentViewController
-            let info = sender as! InfoUser
-            let image = UIImage(data: info.imageData, scale: 1.0)
-            vc.user = info.userData
-            vc.image = image
-        }
+        AppData.appDelegate.navigationController?.pushViewController(AppData.viewControllers[1].viewController, animated: true)
     }
     
 }

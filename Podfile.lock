@@ -1,16 +1,61 @@
 PODS:
+  - MaterialComponents/AnimationTiming (89.0.0)
+  - MaterialComponents/BottomSheet (89.0.0):
+    - MaterialComponents/Elevation
+    - MaterialComponents/private/KeyboardWatcher
+    - MaterialComponents/private/Math
+    - MaterialComponents/ShadowElevations
+    - MaterialComponents/ShadowLayer
+    - MaterialComponents/ShapeLibrary
+    - MaterialComponents/Shapes
+  - MaterialComponents/Elevation (89.0.0):
+    - MaterialComponents/private/Color
+    - MaterialComponents/private/Math
+  - MaterialComponents/Palettes (89.0.0)
+  - MaterialComponents/private/Application (89.0.0)
+  - MaterialComponents/private/Color (89.0.0)
+  - MaterialComponents/private/KeyboardWatcher (89.0.0):
+    - MaterialComponents/private/Application
+  - MaterialComponents/private/Math (89.0.0)
+  - MaterialComponents/ShadowElevations (89.0.0)
+  - MaterialComponents/ShadowLayer (89.0.0):
+    - MaterialComponents/ShadowElevations
+  - MaterialComponents/ShapeLibrary (89.0.0):
+    - MaterialComponents/private/Math
+    - MaterialComponents/Shapes
+  - MaterialComponents/Shapes (89.0.0):
+    - MaterialComponents/private/Color
+    - MaterialComponents/private/Math
+    - MaterialComponents/ShadowLayer
+  - MaterialComponents/TextFields (89.0.0):
+    - MaterialComponents/AnimationTiming
+    - MaterialComponents/Elevation
+    - MaterialComponents/Palettes
+    - MaterialComponents/private/Math
+    - MaterialComponents/Typography
+    - MDFInternationalization
+  - MaterialComponents/Typography (89.0.0):
+    - MaterialComponents/private/Application
+    - MaterialComponents/private/Math
+  - MDFInternationalization (2.0.0)
   - SVProgressHUD (2.2.5)
 
 DEPENDENCIES:
+  - MaterialComponents/BottomSheet
+  - MaterialComponents/TextFields
   - SVProgressHUD
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
+    - MaterialComponents
+    - MDFInternationalization
     - SVProgressHUD
 
 SPEC CHECKSUMS:
+  MaterialComponents: 82a817165f3ca2df0e3f321a9d05d08bb152c7f8
+  MDFInternationalization: 010097556d6b09d2c4ea38e0820ea6d37be6a314
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
 
-PODFILE CHECKSUM: 1583d06af32cec2aae6cbd2470cfa64c116d131f
+PODFILE CHECKSUM: a970d9b1fb942ab284b125df0d480969507e7b02
 
-COCOAPODS: 1.7.5
+COCOAPODS: 1.8.4

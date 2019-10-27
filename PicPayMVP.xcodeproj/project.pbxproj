@@ -26,24 +26,31 @@
 		8D054F842308AB3E00AB00D4 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D054F832308AB3E00AB00D4 /* UserViewController.swift */; };
 		8D054F8B2308BD6200AB00D4 /* UsersPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D054F8A2308BD6200AB00D4 /* UsersPresenter.swift */; };
 		8D054F8E2308F71E00AB00D4 /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8D054F8D2308F71E00AB00D4 /* User.storyboard */; };
+		8D1034CE233161660040E822 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1034CD233161660040E822 /* Transaction.swift */; };
+		8D1FAAF42333FE59009BA4ED /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1FAAF32333FE59009BA4ED /* String.swift */; };
+		8D1FAAF823341CD2009BA4ED /* TextFieldMaterialDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1FAAF723341CD2009BA4ED /* TextFieldMaterialDesign.swift */; };
+		8D1FAAFC23342AFB009BA4ED /* CardRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D1FAAFB23342AFB009BA4ED /* CardRequest.swift */; };
 		8D216816231ED93F00B6C375 /* DataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8D216814231ED93F00B6C375 /* DataModel.xcdatamodeld */; };
 		8D38F6F7231A04D80031D30D /* UserCellPresenterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D38F6F6231A04D80031D30D /* UserCellPresenterView.swift */; };
-		8D38F6FC231A0CC70031D30D /* UserPresenterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D38F6FB231A0CC70031D30D /* UserPresenterView.swift */; };
+		8D4EAAC623468E9A00DF4D40 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D4EAAC523468E9A00DF4D40 /* Data.swift */; };
+		8D644DEA2364FBBC004150A6 /* UserPresenterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D644DE92364FBBC004150A6 /* UserPresenterView.swift */; };
+		8D644DED23653111004150A6 /* ReceiptViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D644DEC23653111004150A6 /* ReceiptViewController.swift */; };
 		8D79E805231AE63C00164F48 /* UsersPresenterRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D79E804231AE63C00164F48 /* UsersPresenterRouter.swift */; };
 		8D79E808231AFE4100164F48 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D79E807231AFE4100164F48 /* PaymentViewController.swift */; };
-		8D79E80A231AFE7300164F48 /* PaymentPresenterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D79E809231AFE7300164F48 /* PaymentPresenterView.swift */; };
+		8DB1F82223427B5900B82F4A /* CardRegisterOneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB1F82123427B5900B82F4A /* CardRegisterOneViewController.swift */; };
+		8DB1F8242342962F00B82F4A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB1F8232342962F00B82F4A /* ViewController.swift */; };
 		8DB8202A2321ACBF0042860F /* CardRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB820292321ACBF0042860F /* CardRegisterViewController.swift */; };
-		8DB8202C2321AD0C0042860F /* CardRegisterPresenterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB8202B2321AD0C0042860F /* CardRegisterPresenterView.swift */; };
 		8DB8202E2321AD330042860F /* CardRegisterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB8202D2321AD330042860F /* CardRegisterPresenter.swift */; };
 		8DB820302321ADA20042860F /* CardRegisterRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB8202F2321ADA20042860F /* CardRegisterRouter.swift */; };
 		8DE772AB231F132100EEF30B /* PaymentPresenterRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE772AA231F132100EEF30B /* PaymentPresenterRouter.swift */; };
 		8DE772AE231F133C00EEF30B /* PaymentPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE772AD231F133C00EEF30B /* PaymentPresenter.swift */; };
-		F56D043A2DA3F2CD18165FC2 /* Pods_PicPayMVP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5EBC92391BF1C44F682FF708 /* Pods_PicPayMVP.framework */; };
+		D750B8074966DDBCBA95A385 /* Pods_PicPayMVP.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D7A8AF332537D735B65B7E5 /* Pods_PicPayMVP.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5EBC92391BF1C44F682FF708 /* Pods_PicPayMVP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PicPayMVP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		72B6A186CEE8917ABF717E35 /* Pods-PicPayMVP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PicPayMVP.release.xcconfig"; path = "Target Support Files/Pods-PicPayMVP/Pods-PicPayMVP.release.xcconfig"; sourceTree = "<group>"; };
+		103F9BFB3FDE1D8F403CFB8D /* Pods-PicPayMVP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PicPayMVP.debug.xcconfig"; path = "Target Support Files/Pods-PicPayMVP/Pods-PicPayMVP.debug.xcconfig"; sourceTree = "<group>"; };
+		76539B635AB03BFD59E86AD9 /* Pods-PicPayMVP.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PicPayMVP.release.xcconfig"; path = "Target Support Files/Pods-PicPayMVP/Pods-PicPayMVP.release.xcconfig"; sourceTree = "<group>"; };
+		7D7A8AF332537D735B65B7E5 /* Pods_PicPayMVP.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PicPayMVP.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D054F3A230890AB00AB00D4 /* PicPayMVP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PicPayMVP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D054F3D230890AB00AB00D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8D054F44230890AD00AB00D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -65,19 +72,24 @@
 		8D054F832308AB3E00AB00D4 /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
 		8D054F8A2308BD6200AB00D4 /* UsersPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersPresenter.swift; sourceTree = "<group>"; };
 		8D054F8D2308F71E00AB00D4 /* User.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = User.storyboard; sourceTree = "<group>"; };
+		8D1034CD233161660040E822 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
+		8D1FAAF32333FE59009BA4ED /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
+		8D1FAAF723341CD2009BA4ED /* TextFieldMaterialDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldMaterialDesign.swift; sourceTree = "<group>"; };
+		8D1FAAFB23342AFB009BA4ED /* CardRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRequest.swift; sourceTree = "<group>"; };
 		8D216815231ED93F00B6C375 /* DataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DataModel.xcdatamodel; sourceTree = "<group>"; };
 		8D38F6F6231A04D80031D30D /* UserCellPresenterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCellPresenterView.swift; sourceTree = "<group>"; };
-		8D38F6FB231A0CC70031D30D /* UserPresenterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPresenterView.swift; sourceTree = "<group>"; };
+		8D4EAAC523468E9A00DF4D40 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		8D644DE92364FBBC004150A6 /* UserPresenterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UserPresenterView.swift; path = ../../../../../../Projects/PicPayMVP/PicPayMVP/Scenes/Users/View/UserPresenterView.swift; sourceTree = "<group>"; };
+		8D644DEC23653111004150A6 /* ReceiptViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptViewController.swift; sourceTree = "<group>"; };
 		8D79E804231AE63C00164F48 /* UsersPresenterRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersPresenterRouter.swift; sourceTree = "<group>"; };
 		8D79E807231AFE4100164F48 /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
-		8D79E809231AFE7300164F48 /* PaymentPresenterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentPresenterView.swift; sourceTree = "<group>"; };
+		8DB1F82123427B5900B82F4A /* CardRegisterOneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRegisterOneViewController.swift; sourceTree = "<group>"; };
+		8DB1F8232342962F00B82F4A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8DB820292321ACBF0042860F /* CardRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRegisterViewController.swift; sourceTree = "<group>"; };
-		8DB8202B2321AD0C0042860F /* CardRegisterPresenterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRegisterPresenterView.swift; sourceTree = "<group>"; };
 		8DB8202D2321AD330042860F /* CardRegisterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRegisterPresenter.swift; sourceTree = "<group>"; };
 		8DB8202F2321ADA20042860F /* CardRegisterRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardRegisterRouter.swift; sourceTree = "<group>"; };
 		8DE772AA231F132100EEF30B /* PaymentPresenterRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentPresenterRouter.swift; sourceTree = "<group>"; };
 		8DE772AD231F133C00EEF30B /* PaymentPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentPresenter.swift; sourceTree = "<group>"; };
-		C9D04CC370A42F9E449F132A /* Pods-PicPayMVP.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PicPayMVP.debug.xcconfig"; path = "Target Support Files/Pods-PicPayMVP/Pods-PicPayMVP.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,28 +97,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F56D043A2DA3F2CD18165FC2 /* Pods_PicPayMVP.framework in Frameworks */,
+				D750B8074966DDBCBA95A385 /* Pods_PicPayMVP.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		36506639F07E9D330BD78951 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				5EBC92391BF1C44F682FF708 /* Pods_PicPayMVP.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		4EB288965FFAA17CB1CAD34B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				C9D04CC370A42F9E449F132A /* Pods-PicPayMVP.debug.xcconfig */,
-				72B6A186CEE8917ABF717E35 /* Pods-PicPayMVP.release.xcconfig */,
+				103F9BFB3FDE1D8F403CFB8D /* Pods-PicPayMVP.debug.xcconfig */,
+				76539B635AB03BFD59E86AD9 /* Pods-PicPayMVP.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		6360120D6E83A7EF7A267EFC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7D7A8AF332537D735B65B7E5 /* Pods_PicPayMVP.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		8D054F31230890AB00AB00D4 = {
@@ -115,7 +127,7 @@
 				8D054F3C230890AB00AB00D4 /* PicPayMVP */,
 				8D054F3B230890AB00AB00D4 /* Products */,
 				4EB288965FFAA17CB1CAD34B /* Pods */,
-				36506639F07E9D330BD78951 /* Frameworks */,
+				6360120D6E83A7EF7A267EFC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -156,10 +168,10 @@
 		8D054F50230890E100AB00D4 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
-				8D054F6C2308946A00AB00D4 /* Receipt */,
-				8D054F6B2308945A00AB00D4 /* Payment */,
-				8D054F6A2308940F00AB00D4 /* CardRegister */,
 				8D054F69230893FF00AB00D4 /* Users */,
+				8D054F6A2308940F00AB00D4 /* CardRegister */,
+				8D054F6B2308945A00AB00D4 /* Payment */,
+				8D644DEB236530B7004150A6 /* Receipt */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -224,19 +236,11 @@
 		8D054F6B2308945A00AB00D4 /* Payment */ = {
 			isa = PBXGroup;
 			children = (
+				8D1034CC233161590040E822 /* Model */,
 				8D054F742308A54600AB00D4 /* View */,
 				8D054F752308A54900AB00D4 /* Presenter */,
 			);
 			path = Payment;
-			sourceTree = "<group>";
-		};
-		8D054F6C2308946A00AB00D4 /* Receipt */ = {
-			isa = PBXGroup;
-			children = (
-				8D054F772308A56A00AB00D4 /* View */,
-				8D054F782308A56E00AB00D4 /* Presenter */,
-			);
-			path = Receipt;
 			sourceTree = "<group>";
 		};
 		8D054F6D2308A51D00AB00D4 /* View */ = {
@@ -244,7 +248,7 @@
 			children = (
 				8D38F6F5231A03F00031D30D /* UsersCell */,
 				8D054F832308AB3E00AB00D4 /* UserViewController.swift */,
-				8D38F6FB231A0CC70031D30D /* UserPresenterView.swift */,
+				8D644DE92364FBBC004150A6 /* UserPresenterView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -270,7 +274,7 @@
 			isa = PBXGroup;
 			children = (
 				8DB820292321ACBF0042860F /* CardRegisterViewController.swift */,
-				8DB8202B2321AD0C0042860F /* CardRegisterPresenterView.swift */,
+				8DB1F82123427B5900B82F4A /* CardRegisterOneViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -288,7 +292,6 @@
 			isa = PBXGroup;
 			children = (
 				8D79E807231AFE4100164F48 /* PaymentViewController.swift */,
-				8D79E809231AFE7300164F48 /* PaymentPresenterView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -302,24 +305,14 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
-		8D054F772308A56A00AB00D4 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
-		8D054F782308A56E00AB00D4 /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Presenter;
-			sourceTree = "<group>";
-		};
 		8D054F7E2308A84200AB00D4 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				8D1FAAF22333FE45009BA4ED /* Extension */,
 				8D054F7F2308A89500AB00D4 /* RoundImage.swift */,
+				8D1FAAF723341CD2009BA4ED /* TextFieldMaterialDesign.swift */,
+				8D1FAAFB23342AFB009BA4ED /* CardRequest.swift */,
+				8D4EAAC523468E9A00DF4D40 /* Data.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -331,6 +324,23 @@
 				8D054F8D2308F71E00AB00D4 /* User.storyboard */,
 			);
 			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		8D1034CC233161590040E822 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8D1034CD233161660040E822 /* Transaction.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8D1FAAF22333FE45009BA4ED /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				8D1FAAF32333FE59009BA4ED /* String.swift */,
+				8DB1F8232342962F00B82F4A /* ViewController.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		8D216813231ED91C00B6C375 /* Data Model */ = {
@@ -350,6 +360,14 @@
 			path = UsersCell;
 			sourceTree = "<group>";
 		};
+		8D644DEB236530B7004150A6 /* Receipt */ = {
+			isa = PBXGroup;
+			children = (
+				8D644DEC23653111004150A6 /* ReceiptViewController.swift */,
+			);
+			path = Receipt;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -357,11 +375,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8D054F4C230890AD00AB00D4 /* Build configuration list for PBXNativeTarget "PicPayMVP" */;
 			buildPhases = (
-				C7AA93F885870C77C2556A0D /* [CP] Check Pods Manifest.lock */,
+				A2A4C6603824CF8CBFD52DED /* [CP] Check Pods Manifest.lock */,
 				8D054F36230890AB00AB00D4 /* Sources */,
 				8D054F37230890AB00AB00D4 /* Frameworks */,
 				8D054F38230890AB00AB00D4 /* Resources */,
-				DBB7C62A37F8B5DB6ABD342E /* [CP] Embed Pods Frameworks */,
+				1B3022795FB232D022853AD9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -419,7 +437,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		C7AA93F885870C77C2556A0D /* [CP] Check Pods Manifest.lock */ = {
+		1B3022795FB232D022853AD9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PicPayMVP/Pods-PicPayMVP-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PicPayMVP/Pods-PicPayMVP-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PicPayMVP/Pods-PicPayMVP-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A2A4C6603824CF8CBFD52DED /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -441,23 +476,6 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DBB7C62A37F8B5DB6ABD342E /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PicPayMVP/Pods-PicPayMVP-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-PicPayMVP/Pods-PicPayMVP-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PicPayMVP/Pods-PicPayMVP-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -468,6 +486,7 @@
 				8D054F582308924B00AB00D4 /* HTTPTask.swift in Sources */,
 				8D054F842308AB3E00AB00D4 /* UserViewController.swift in Sources */,
 				8DB8202A2321ACBF0042860F /* CardRegisterViewController.swift in Sources */,
+				8D644DED23653111004150A6 /* ReceiptViewController.swift in Sources */,
 				8DB820302321ADA20042860F /* CardRegisterRouter.swift in Sources */,
 				8D054F802308A89500AB00D4 /* RoundImage.swift in Sources */,
 				8DB8202E2321AD330042860F /* CardRegisterPresenter.swift in Sources */,
@@ -475,22 +494,27 @@
 				8D38F6F7231A04D80031D30D /* UserCellPresenterView.swift in Sources */,
 				8D054F682308931100AB00D4 /* URLEncoding.swift in Sources */,
 				8D054F5C2308926800AB00D4 /* EndPointType.swift in Sources */,
+				8D1FAAF823341CD2009BA4ED /* TextFieldMaterialDesign.swift in Sources */,
+				8DB1F82223427B5900B82F4A /* CardRegisterOneViewController.swift in Sources */,
 				8DE772AE231F133C00EEF30B /* PaymentPresenter.swift in Sources */,
 				8D79E808231AFE4100164F48 /* PaymentViewController.swift in Sources */,
+				8D1FAAF42333FE59009BA4ED /* String.swift in Sources */,
 				8D054F60230892C300AB00D4 /* ManagerImage.swift in Sources */,
-				8D38F6FC231A0CC70031D30D /* UserPresenterView.swift in Sources */,
+				8D1FAAFC23342AFB009BA4ED /* CardRequest.swift in Sources */,
 				8D054F822308AAF300AB00D4 /* UserCell.swift in Sources */,
 				8D216816231ED93F00B6C375 /* DataModel.xcdatamodeld in Sources */,
 				8DE772AB231F132100EEF30B /* PaymentPresenterRouter.swift in Sources */,
+				8D4EAAC623468E9A00DF4D40 /* Data.swift in Sources */,
 				8D054F662308930600AB00D4 /* ParameterEncoding.swift in Sources */,
 				8D054F8B2308BD6200AB00D4 /* UsersPresenter.swift in Sources */,
 				8D054F562308921500AB00D4 /* Router.swift in Sources */,
-				8DB8202C2321AD0C0042860F /* CardRegisterPresenterView.swift in Sources */,
 				8D054F5E230892AB00AB00D4 /* Manager.swift in Sources */,
+				8DB1F8242342962F00B82F4A /* ViewController.swift in Sources */,
 				8D054F7C2308A6AD00AB00D4 /* User.swift in Sources */,
 				8D79E805231AE63C00164F48 /* UsersPresenterRouter.swift in Sources */,
-				8D79E80A231AFE7300164F48 /* PaymentPresenterView.swift in Sources */,
 				8D054F5A2308925A00AB00D4 /* HTTPMethod.swift in Sources */,
+				8D644DEA2364FBBC004150A6 /* UserPresenterView.swift in Sources */,
+				8D1034CE233161660040E822 /* Transaction.swift in Sources */,
 				8D054F64230892F800AB00D4 /* JSONEncoding.swift in Sources */,
 				8D054F3E230890AB00AB00D4 /* AppDelegate.swift in Sources */,
 			);
@@ -561,7 +585,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -616,7 +640,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -628,12 +652,13 @@
 		};
 		8D054F4D230890AD00AB00D4 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C9D04CC370A42F9E449F132A /* Pods-PicPayMVP.debug.xcconfig */;
+			baseConfigurationReference = 103F9BFB3FDE1D8F403CFB8D /* Pods-PicPayMVP.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 588C5Z47C8;
+				DEVELOPMENT_TEAM = 99KYW7V6K2;
 				INFOPLIST_FILE = PicPayMVP/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -647,12 +672,13 @@
 		};
 		8D054F4E230890AD00AB00D4 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 72B6A186CEE8917ABF717E35 /* Pods-PicPayMVP.release.xcconfig */;
+			baseConfigurationReference = 76539B635AB03BFD59E86AD9 /* Pods-PicPayMVP.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 588C5Z47C8;
+				DEVELOPMENT_TEAM = 99KYW7V6K2;
 				INFOPLIST_FILE = PicPayMVP/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

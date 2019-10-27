@@ -13,9 +13,9 @@ let mCell = "cell"
 class UserCell: UITableViewCell {
     
     //MARK: Outlets
-    @IBOutlet weak var userImage: RoundImage!
-    @IBOutlet weak var lbUsername: UILabel!
-    @IBOutlet weak var lbFullName: UILabel!
+    @IBOutlet var userImage: RoundImage!
+    @IBOutlet var lbUsername: UILabel!
+    @IBOutlet var lbFullName: UILabel!
     
 }
 //MARK: UserCellPresenterView

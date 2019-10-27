@@ -2,7 +2,7 @@
 //  UserPresenterView.swift
 //  PicPayMVP
 //
-//  Created by Bryan Souza on 30/08/19.
+//  Created by Bryan Souza on 26/10/19.
 //  Copyright © 2019 Bryan Souza. All rights reserved.
 //
 

@@ -20,7 +20,7 @@ class UserViewController: UIViewController {
     
     //MARK: Presenter
     lazy var presenter: UsersPresenter = {
-        let p = UsersPresenter(view: self, router: UsersPresenterRouter(self))
+        let p = UsersPresenter(view: self as UserPresenterView, router: UsersPresenterRouter(self))
         return p
     }()
     
@@ -50,7 +50,7 @@ class UserViewController: UIViewController {
     
     //MARK: Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
-        presenter.prepare(for: segue, sender: sender)
+//        presenter.prepare(for: segue, sender: sender)
     }
 
 }
@@ -68,11 +68,15 @@ extension UserViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: mCell, for: indexPath) as! UserCell
         presenter.configureCell(cell, for: indexPath.row)
+        cell.selectionStyle = .none
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        presenter.onDidSelectRowAt(for: indexPath.row, isActive: searchController.isActive)
+        if #available(iOS 13.0, *) {
+            presenter.onDidSelectRowAt(for: indexPath.row, isActive: searchController.isActive)
+        }
+        tableView.deselectRow(at: indexPath, animated: false)
     }
     
 }

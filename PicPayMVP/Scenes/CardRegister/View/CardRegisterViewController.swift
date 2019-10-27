@@ -12,10 +12,10 @@ import SVProgressHUD
 class CardRegisterViewController: UIViewController {
     
     //MARK: Outlets
-    @IBOutlet weak var lbNumCartao: UITextField!
-    @IBOutlet weak var lbTitular: UITextField!
-    @IBOutlet weak var lbVencimento: UITextField!
-    @IBOutlet weak var lbCvv: UITextField!
+    @IBOutlet weak var txtTitular: TextFieldMaterialDesign!
+    @IBOutlet weak var txtNumCard: TextFieldMaterialDesign!
+    @IBOutlet weak var txtExpiryDate: TextFieldMaterialDesign!
+    @IBOutlet weak var txtCvv: TextFieldMaterialDesign!
     @IBOutlet weak var scrollView: UIScrollView!
     
     var card: Card?
@@ -28,38 +28,26 @@ class CardRegisterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        card = presenter.load()
-        
+        card = CardRequest.shared.load()
+        self.setupNavigation()
         if(card != nil){
             guard let card = card else { return }
-            lbNumCartao.text = card.number
-            lbTitular.text = card.name
-            lbVencimento.text = card.expiryDate
-            lbCvv.text = String(card.cvv)
+            txtNumCard.text = card.number
+            txtTitular.text = card.name
+            txtExpiryDate.text = card.expiryDate
+            txtCvv.text = String(card.cvv)
         }
     }
     
     //MARK: Actions
+    @available(iOS 13.0, *)
     @IBAction func btnSave(_ sender: Any) {
-        guard let num = lbNumCartao.text else { return }
-        guard let titular = lbTitular.text else { return }
-        guard let vencimento = lbVencimento.text else { return }
-        guard let cvv = lbCvv.text else { return }
+        guard let num = txtNumCard.text else { return }
+        guard let titular = txtTitular.text else { return }
+        guard let vencimento = txtExpiryDate.text else { return }
+        guard let cvv = txtCvv.text else { return }
         presenter.save(num, titular, vencimento, cvv)
+        presenter.presentPayment()
     }
     
-}
-
-extension CardRegisterViewController: CardRegisterPresenterView{
-    func startLoading() {
-        SVProgressHUD.show()
-    }
-    
-    func stopLoading() {
-        SVProgressHUD.dismiss()
-    }
-    
-    func reloadData() {
-        print()
-    }
 }

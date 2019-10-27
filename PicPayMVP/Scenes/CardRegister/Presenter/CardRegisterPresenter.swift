@@ -13,45 +13,59 @@ import CoreData
 class CardRegisterPresenter {
     
     //MARK: PROPERTIES
-    private(set) weak var view: CardRegisterPresenterView!
+    private(set) weak var view: CardRegisterViewController!
     private weak var scrollView: UIScrollView!
     private var router: CardRegisterRouter
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    var cardList = [Card]()
     
     //MARK: CONSTRUCTOR
-    init(view: CardRegisterPresenterView, router: CardRegisterRouter) {
+    init(view: CardRegisterViewController, router: CardRegisterRouter) {
         self.view = view
         self.router = router
     }
     
+    //MARK: ViewDidLoad
+    func viewDidLoad(){
+        reload()
+    }
+    
     //MARK: SAVE CARD ON CORE DATA
     func save(_ number: String, _ titular: String, _ vencimento: String, _ cvv: String){
-        if(load() == nil){
+        if(CardRequest.shared.load() == nil){
             //CREATE
-            if (!number.isEmpty && !titular.isEmpty && !vencimento.isEmpty && !cvv.isEmpty){
-                let newCard = Card(context: context)
-                newCard.id = 1
-                newCard.name = titular
-                newCard.cvv = Int32(cvv)!
-                newCard.number = number
-                newCard.expiryDate = vencimento
-                self.cardList.append(newCard)
-                saveContext()
-            }
+            create(number, titular, vencimento, cvv)
         }
         else{
             //UPDATE
-            if (!number.isEmpty && !titular.isEmpty && !vencimento.isEmpty && !cvv.isEmpty){
-                cardList[0].name = titular
-                cardList[0].expiryDate = vencimento
-                cardList[0].number = number
-                cardList[0].cvv = Int32(cvv)!
+            if (!number.isEmpty && !titular.isEmpty && !vencimento.isEmpty && !cvv.isEmpty && CardRequest.cardList.count > 0){
+                CardRequest.cardList[0].name = titular
+                CardRequest.cardList[0].expiryDate = vencimento
+                CardRequest.cardList[0].number = number
+                CardRequest.cardList[0].cvv = Int32(cvv)!
                 saveContext()
+            }
+            else {
+                //CREATE
+                create(number, titular, vencimento, cvv)
             }
         }
     }
     
+    //MARK: CREATE
+    func create(_ number: String, _ titular: String, _ expiryDate: String, _ cvv: String){
+        if (!number.isEmpty && !titular.isEmpty && !expiryDate.isEmpty && !cvv.isEmpty){
+            let newCard = Card(context: context)
+            newCard.id = 1
+            newCard.name = titular
+            newCard.cvv = Int32(cvv)!
+            newCard.number = number
+            newCard.expiryDate = expiryDate
+            CardRequest.cardList.append(newCard)
+            saveContext()
+        }
+    }
+    
+    //MARK: SAVE
     func saveContext(){
         do{
             try context.save()
@@ -61,37 +75,31 @@ class CardRegisterPresenter {
         }
     }
     
-    //MARK: GET CARD FROM CORE DATA
-    
-    //READ
-    func load() -> Card? {
+    //MARK: RELOAD
+    func reload(){
         let request: NSFetchRequest<Card> = Card.fetchRequest()
         do{
-            cardList = try context.fetch(request)
+            CardRequest.cardList = try context.fetch(request)
         }
         catch
         {
             print("Error fetching data from context: \(error)")
         }
-        
-        if(cardList.isEmpty){
-            return nil
-        }
-        else {
-            return cardList[0]
-        }
-        
     }
     
     //DELETE
     func delete(){
-        guard let card = cardList.last else { return }
+        guard let card = CardRequest.cardList.last else { return }
         context.delete(card)
         saveContext()
     }
     
-    //MARK: Navigation
-    func prepare(for segue: UIStoryboardSegue, sender: Any?){
-        router.prepare(for: segue, sender: sender)
+    //MARK: PresentPayment
+    @available(iOS 13.0, *)
+    func presentPayment(){
+        AppData.appDelegate.navigationController?.viewControllers.removeLast()
+        AppData.appDelegate.navigationController?.viewControllers.removeLast()
+        AppData.appDelegate.navigationController?.pushViewController(AppData.viewControllers[2].viewController, animated: true)
     }
+    
 }

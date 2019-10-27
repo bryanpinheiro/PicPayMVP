@@ -9,46 +9,56 @@
 import UIKit
 
 class PaymentViewController: UIViewController {
-
+    
     //MARK: Properties
-    var user: User?
     var image: UIImage?
     
     //MARK: Outlets
     @IBOutlet weak var userImage: RoundImage!
     @IBOutlet weak var lbUsername: UILabel!
-    @IBOutlet weak var lbPrice: UILabel!
+    @IBOutlet weak var txtPrice: UITextField!
     
     lazy var presenter: PaymentPresenter = {
-        let p = PaymentPresenter(view: self as! PaymentPrensenterView, router: PaymentPresenterRouter(self))
+        let p = PaymentPresenter(view: self, router: PaymentPresenterRouter(self))
         return p
     }()
     
+    override func viewDidAppear(_ animated: Bool) {
+        if let u = AppData.User {
+            lbUsername.text = u.username
+        }
+        if let i = AppData.Image {
+            userImage.image = i
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        lbUsername.text = user?.username
-        userImage.image = image
+        self.setupNavigation()
         // Do any additional setup after loading the view.
     }
     
     //MARK: ACTIONS
     @IBAction func back(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
-        
+        AppData.appDelegate.navigationController?.popToRootViewController(animated: true)
     }
     
+    @available(iOS 13.0, *)
     @IBAction func edit(_ sender: Any) {
-        presenter.router.presentCardRegister()
+        presenter.presentCardRegister()
     }
     
-}
-
-extension PaymentViewController: PaymentPrensenterView{
-    func startLoading() {
-        print("start")
+    @IBAction func pay(_ sender: Any) {
+        guard let card = CardRequest.shared.load() else { return }
+        guard let u = AppData.User else { return }
+        
+        //Data
+        guard let number = card.number else { return }
+        guard let priceText = txtPrice.text else { return }
+        guard let expiryDate = card.expiryDate else { return }
+        guard let price = Double(priceText) else { return }
+        
+        presenter.pay(numero: number, cvv: Int(card.cvv), valor: price, expiracao: expiryDate, idContato: u.id)
     }
     
-    func stopLoading() {
-        print("stop")
-    }
 }

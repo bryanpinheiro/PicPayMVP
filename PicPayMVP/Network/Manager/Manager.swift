@@ -26,12 +26,12 @@ enum Result<String>{
 struct NetworkManager {
     
     static let shared = NetworkManager()
-    static let environment : NetworkEnvironment = .production
+    static let environment : NetworkEnvironment = .base
     let router = Router<PicPayApi>()
     
     //MASK: GET
-    func getPopular(completion: @escaping (Response?, String?) -> Void){
-        router.request(.popular) { data, response, error in
+    func getContatos(completion: @escaping ([User]?, String?) -> Void){
+        router.request(.contatos) { data, response, error in
             if error != nil {
                 completion(nil, "Por favor, verifique sua conexão de rede.")
             }
@@ -45,9 +45,8 @@ struct NetworkManager {
                         return
                     }
                     do {
-                        let apiResponse = try JSONDecoder().decode(Array<User>.self, from: responseData)
-                        var resp = Response(results: apiResponse)
-                        completion(resp, nil)
+                        let json = try JSONDecoder().decode([User].self, from: responseData)
+                        completion(json, nil)
                     }catch {
                         print(error)
                         completion(nil, NetworkResponse.unableToDecode.rawValue)
@@ -59,9 +58,34 @@ struct NetworkManager {
         }
     }
     
-    //MASK: POST
-    func transaction(){
-        
+    //POST
+    func payment(numero: String, cvv: Int, valor: Double, expiracao: String, idContato: Int, completion: @escaping (ResponseTransaction?, String?) -> Void) {
+        router.request(.pagamento(numero: numero, cvv: cvv, valor: valor, expiracao: expiracao, idContato: idContato)) { (data, response, error) in
+            
+            if error != nil {
+                completion(nil, "Por favor, verifique sua conexão de rede.")
+            }
+            
+            if let response = response as? HTTPURLResponse {
+                let result = self.handleNetworkResponse(response)
+                switch result {
+                case .success:
+                    guard let responseData = data else {
+                        completion(nil, NetworkResponse.noData.rawValue)
+                        return
+                    }
+                    do {
+                        let json = try JSONDecoder().decode(ResponseTransaction.self, from: responseData)
+                        completion(json, nil)
+                    }catch {
+                        print(error)
+                        completion(nil, NetworkResponse.unableToDecode.rawValue)
+                    }
+                case .failure(let networkFailureError):
+                    completion(nil, networkFailureError)
+                }
+            }
+        }
     }
     
     fileprivate func handleNetworkResponse(_ response: HTTPURLResponse) -> Result<String>{

@@ -7,4 +7,6 @@ target 'PicPayMVP' do
 
   # Pods for PicPayMVP
 	pod 'SVProgressHUD'
+  pod 'MaterialComponents/TextFields'
+  pod 'MaterialComponents/BottomSheet'
 end
